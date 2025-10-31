@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Fitness System</title>
+<link rel="shortcut icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@600;700;800;900&family=Rubik:wght@400;500;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script defer src="../assets/js/script.js"></script>
+</head>
+<body id="top">
+<header class="header" data-header>
+    <div class="container">
+      <a href="../index.html" class="logo">
+        <ion-icon name="barbell-sharp" aria-hidden="true"></ion-icon>
+        <span class="span">Fitness System</span>
+      </a>
+      <nav class="navbar" data-navbar>
+        <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+          <ion-icon name="close-sharp" aria-hidden="true"></ion-icon>
+        </button>
+        <ul class="navbar-list">
+          <li><a href="../index.html" class="navbar-link" data-nav-link>Home</a></li>
+          <li><a href="./verity.html" class="navbar-link" data-nav-link>Verity</a></li>
+          <li><a href="./about.html" class="navbar-link" data-nav-link>About</a></li>
+          <li><a href="./blog.html" class="navbar-link active" data-nav-link>Blog</a></li>
+          <li><a href="./contact.html" class="navbar-link" data-nav-link>Contact</a></li>
+        </ul>
+      </nav>
+      <a href="./contact.html" class="btn btn-secondary">Join Now</a>
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-sharp" aria-hidden="true"></ion-icon>
+      </button>
+      <div class="overlay" data-nav-toggler data-overlay></div>
+    </div>
+  </header>
+  <main>
+    <section class="section blog">
+      <div class="container">
+        <p class="section-subtitle">Blog</p>
+        <h2 class="h2 section-title">Latest from the Floor</h2>
+        <ul class="grid-list" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px;padding:0">
+    <li class="blog-card" style="list-style:none">
+      <figure class="card-banner img-holder" style="--width:450;--height:300">
+        <img src="../assets/images/blog-1.jpg" width="450" height="300" loading="lazy" alt="Blog 1">
+      </figure>
+      <div class="card-content">
+        <h3 class="h3"><a class="card-title">How to Train Smarter — Part 1</a></h3>
+        <p class="card-text">Quick tips on mobility you can apply today.</p>
+        <a class="btn btn-secondary" href="#">Read More</a>
+      </div>
+    </li>
+    
+    <li class="blog-card" style="list-style:none">
+      <figure class="card-banner img-holder" style="--width:450;--height:300">
+        <img src="../assets/images/blog-2.jpg" width="450" height="300" loading="lazy" alt="Blog 2">
+      </figure>
+      <div class="card-content">
+        <h3 class="h3"><a class="card-title">How to Train Smarter — Part 2</a></h3>
+        <p class="card-text">Quick tips on strength you can apply today.</p>
+        <a class="btn btn-secondary" href="#">Read More</a>
+      </div>
+    </li>
+    
+    <li class="blog-card" style="list-style:none">
+      <figure class="card-banner img-holder" style="--width:450;--height:300">
+        <img src="../assets/images/blog-3.jpg" width="450" height="300" loading="lazy" alt="Blog 3">
+      </figure>
+      <div class="card-content">
+        <h3 class="h3"><a class="card-title">How to Train Smarter — Part 3</a></h3>
+        <p class="card-text">Quick tips on cardio you can apply today.</p>
+        <a class="btn btn-secondary" href="#">Read More</a>
+      </div>
+    </li>
+    </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" style="padding:20px 0;background:#0B0D13;color:#fff">
+    <div class="container">
+      <p style="opacity:.8">© 2025 Fitness System — All rights reserved.</p>
+    </div>
+  </footer>
+  <a href="#top" class="back-top-btn" aria-label="back top top" data-back-top-btn>
+    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+  </a>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

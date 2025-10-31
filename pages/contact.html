@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Fitness System</title>
+  <link rel="shortcut icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@600;700;800;900&family=Rubik:wght@400;500;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script defer src="../assets/js/script.js"></script>
+</head>
+<body id="top">
+<header class="header" data-header>
+    <div class="container">
+      <a href="../index.html" class="logo">
+        <ion-icon name="barbell-sharp" aria-hidden="true"></ion-icon>
+        <span class="span">Fitness System</span>
+      </a>
+      <nav class="navbar" data-navbar>
+        <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+          <ion-icon name="close-sharp" aria-hidden="true"></ion-icon>
+        </button>
+        <ul class="navbar-list">
+          <li><a href="../index.html" class="navbar-link" data-nav-link>Home</a></li>
+          <li><a href="./verity.html" class="navbar-link" data-nav-link>Verity</a></li>
+          <li><a href="./about.html" class="navbar-link" data-nav-link>About</a></li>
+          <li><a href="./blog.html" class="navbar-link" data-nav-link>Blog</a></li>
+          <li><a href="./contact.html" class="navbar-link active" data-nav-link>Contact</a></li>
+        </ul>
+      </nav>
+      <a href="./contact.html" class="btn btn-secondary">Join Now</a>
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-sharp" aria-hidden="true"></ion-icon>
+      </button>
+      <div class="overlay" data-nav-toggler data-overlay></div>
+    </div>
+  </header>
+  <main>
+    <section class="section contact">
+      <div class="container">
+        <p class="section-subtitle">Contact</p>
+        <h2 class="h2 section-title">We'd Love to Hear From You</h2>
+        <div class="grid-list" style="display:grid;grid-template-columns:1fr;gap:24px;max-width:720px">
+          <form id="contact-form" class="newsletter-form" onsubmit="return sendWhatsApp(event)">
+            <input type="text" name="name" placeholder="Your Name" required class="email-field">
+            <input type="tel" name="phone" placeholder="Phone (WhatsApp)" required class="email-field">
+            <input type="text" name="machine" placeholder="Machine (optional)" class="email-field">
+            <textarea name="message" placeholder="Message" rows="4" class="email-field"></textarea>
+            <button type="submit" class="btn btn-primary">Send via WhatsApp</button>
+          </form>
+          <div>
+            <h3 class="h3">Studio Details</h3>
+            <p class="card-text">Address: Your Gym Address, Dehradun<br/>Email: hello@example.com<br/>Phone: +91-99999-99999</p>
+            <iframe style="width:100%;height:260px;border:0;border-radius:10px" loading="lazy" allowfullscreen 
+                    src="https://maps.google.com/maps?q=Dehradun&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    function sendWhatsApp(e){
+      e.preventDefault();
+      const f = e.target;
+      const name = encodeURIComponent(f.name.value);
+      const phone = encodeURIComponent(f.phone.value);
+      const machineField = f.machine.value || new URLSearchParams(window.location.search).get('machine') || '';
+      const machine = encodeURIComponent(machineField);
+      const msg = encodeURIComponent(`Hi! I'm ${name} (${phone}). I want to enquire${machine? ' about ' + machine : ''}.`);
+      const number = "919999999999"; // <-- update to your business WhatsApp
+      window.open(`https://wa.me/${number}?text=${msg}`, "_blank");
+      return false;
+    }
+  </script>
+
+  <footer class="footer" style="padding:20px 0;background:#0B0D13;color:#fff">
+    <div class="container">
+      <p style="opacity:.8">© 2025 Fitness System — All rights reserved.</p>
+    </div>
+  </footer>
+  <a href="#top" class="back-top-btn" aria-label="back top top" data-back-top-btn>
+    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+  </a>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
