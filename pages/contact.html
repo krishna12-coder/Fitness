@@ -70,7 +70,7 @@
       const machineField = f.machine.value || new URLSearchParams(window.location.search).get('machine') || '';
       const machine = encodeURIComponent(machineField);
       const msg = encodeURIComponent(`Hi! I'm ${name} (${phone}). I want to enquire${machine? ' about ' + machine : ''}.`);
-      const number = "919999999999"; // <-- update to your business WhatsApp
+      const number = "9897286211"; // <-- update to your business WhatsApp
       window.open(`https://wa.me/${number}?text=${msg}`, "_blank");
       return false;
     }
